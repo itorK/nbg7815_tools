@@ -1,3 +1,8 @@
+if [ ! -f "openwrt-ipq807x-generic-zyxel_nbg7815-squashfs-sysupgrade.bin" ]; then
+     echo "Cannot find image openwrt-ipq807x-generic-zyxel_nbg7815-squashfs-sysupgrade.bin"
+     exit 1
+fi
+
 tar xvf ./openwrt-ipq807x-generic-zyxel_nbg7815-squashfs-sysupgrade.bin
 
 primaryboot_hlos=$(cat /proc/boot_info/0:HLOS/primaryboot)
