@@ -1,3 +1,5 @@
+# Author: Karol Przybylski <itor@o2.pl>
+
 if [ ! -f "openwrt-ipq807x-generic-zyxel_nbg7815-squashfs-sysupgrade.bin" ]; then
      echo "Cannot find image openwrt-ipq807x-generic-zyxel_nbg7815-squashfs-sysupgrade.bin"
      exit 1
