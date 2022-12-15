@@ -6,7 +6,7 @@ openwrt_type=$(cat /etc/openwrt_release|grep DISTRIB_TARGET|cut -f 2 -d "'")
 
 if [ ${openwrt_type} == "ipq807x/generic" ]; then
   echo "OpenWrt release"
-  boot_part=$(hexdump -e '1/1 "%01x|"' -n 1 -s 168 -C /dev/mtd3|cut -f 1 -d "|"|head -n1)
+  boot_part=$(hexdump -e '1/1 "%01x|"' -n 1 -s 168 -C /dev/mtd2|cut -f 1 -d "|"|head -n1)
 
   dd if=/dev/mtd2 of=boot.bin bs=336 count=1
 
