@@ -17,8 +17,8 @@ if [ ${openwrt_type} == "ipq807x/generic" ]; then
 
   fi
 
-  dd if=boot.bin of=/dev/mtd2
-  dd if=boot.bin of=/dev/mtd3
+  mtd write boot.bin /dev/mtd2
+  mtd write boot.bin /dev/mtd3
 fi
 
 if [ ${openwrt_type} == "ipq/ipq807x_64" ]; then
